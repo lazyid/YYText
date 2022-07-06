@@ -275,6 +275,7 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 @property (nonatomic) UIViewContentMode contentMode;            ///< Content display mode.
 @property (nonatomic) UIEdgeInsets contentInsets;               ///< The insets when drawing content.
 @property (nullable, nonatomic, strong) NSDictionary *userInfo; ///< The user information dictionary.
+@property (nonatomic) NSMutableAttributedString *highlightText;
 @end
 
 
