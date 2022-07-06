@@ -205,6 +205,12 @@ static dispatch_queue_t YYLabelGetReleaseQueue() {
         NSDictionary *newAttrs = _highlight.attributes;
         [newAttrs enumerateKeysAndObjectsUsingBlock:^(NSString *key, id value, BOOL *stop) {
             [hiText yy_setAttribute:key value:value range:_highlightRange];
+            if( [key isEqualToString:@"YYTextAttachment"] ){
+                YYTextAttachment *att = (YYTextAttachment *)value;
+                if( att.highlightText != nil ){
+                    [hiText replaceCharactersInRange:_highlightRange withAttributedString:att.highlightText];
+                }
+            }
         }];
         _highlightLayout = [YYTextLayout layoutWithContainer:_innerContainer text:hiText];
         _shrinkHighlightLayout = [YYLabel _shrinkLayoutWithLayout:_highlightLayout];
