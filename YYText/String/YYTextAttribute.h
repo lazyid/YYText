@@ -326,6 +326,8 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 - (void)setBorder:(nullable YYTextBorder *)border;
 - (void)setAttachment:(nullable YYTextAttachment *)attachment;
 
+@property (nonatomic) NSInteger tagID;
+
 /**
  The user information dictionary, default is nil.
  */
