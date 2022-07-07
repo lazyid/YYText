@@ -327,7 +327,7 @@ typedef void(^YYTextAction)(UIView *containerView, NSAttributedString *text, NSR
 - (void)setAttachment:(nullable YYTextAttachment *)attachment;
 
 @property (nonatomic) NSInteger tagID;
-@property (nullable, nonatomic, copy) NSString *tagName; ///< backed string
+@property (nullable, nonatomic, copy) NSString *tagName;
 
 /**
  The user information dictionary, default is nil.
